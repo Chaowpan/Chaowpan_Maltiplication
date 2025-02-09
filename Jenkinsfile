@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                print "Hello Jenkins"
+                print "build docker"
         }
         }
         stage('Deploy Image') {
