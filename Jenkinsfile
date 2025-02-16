@@ -4,6 +4,15 @@ pipeline {
         stage('Clone') {
             steps {
                 print "clone docker"
+                checkout([
+                    $class: 'GitSCM', 
+                    branches: [[name: '*/main'],
+                    userRemoteConfigs: [ [ 
+                    credentialsId: 'Chaowpan', 
+                    url: 'https://github.com/Chaowpan/Chaowpan.github.io.git'
+            ] ]
+            ])
+            print "Clone Success"
             }
         }
         stage('Build') {
