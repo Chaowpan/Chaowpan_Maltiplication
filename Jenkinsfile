@@ -6,7 +6,7 @@ pipeline {
                 print "clone docker"
                 checkout([
                     $class: 'GitSCM', 
-                    branches: [[name: '*/main'],
+                    branches: [[name: '*/main']],
                     userRemoteConfigs: [ [ 
                     credentialsId: 'Chaowpan', 
                     url: 'https://github.com/Chaowpan/Chaowpan.github.io.git'
